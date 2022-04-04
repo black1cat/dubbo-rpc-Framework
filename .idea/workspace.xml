@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="GROUP_BY_SEVERITY" value="true" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="77436e95-b91e-486b-a957-54a67f84d326" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="27HJr259jSN3CW6JDlgSSgm5DcI" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.20117188" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="pojo" />
+      <recent name="demo2.pojo" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\动手写个RPC\dubbo-rpc-demo\src\main\java\pojo" />
+      <recent name="D:\动手写个RPC\dubbo-rpc-demo\src\main\java\service\serviceImpl" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.TestClient">
+    <configuration name="TestClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zzj.rpc.TestClient" />
+      <module name="rpc-client" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zzj.rpc.TestServer" />
+      <module name="rpc-server" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dailidemo.test" />
+      <module name="demo01" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dailidemo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.TestClient" />
+        <item itemvalue="Application.TestServer" />
+        <item itemvalue="Application.test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="77436e95-b91e-486b-a957-54a67f84d326" name="Default Changelist" comment="" />
+      <created>1648971272639</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1648971272639</updated>
+      <workItem from="1648971281243" duration="14582000" />
+      <workItem from="1648997308105" duration="747000" />
+      <workItem from="1649045904818" duration="1003000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="94" key="#Project_Structure" timestamp="1649046800029">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="361" y="94" key="#Project_Structure/0.0.1536.864@0.0.1536.864" timestamp="1649046800029" />
+    <state x="574" y="151" key="#com.intellij.ide.util.MemberChooser" timestamp="1648986467978">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="574" y="151" key="#com.intellij.ide.util.MemberChooser/0.0.1536.864@0.0.1536.864" timestamp="1648986467978" />
+    <state x="415" y="360" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1648978110537">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="415" y="360" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.864@0.0.1536.864" timestamp="1648978110537" />
+    <state x="553" y="299" width="429" height="271" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1648978160514">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="553" y="299" width="429" height="271" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.864@0.0.1536.864" timestamp="1648978160514" />
+    <state width="1493" height="122" key="GridCell.Tab.0.bottom" timestamp="1648990210189">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="122" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1648990210189" />
+    <state width="1493" height="122" key="GridCell.Tab.0.center" timestamp="1648990210189">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="122" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1648990210189" />
+    <state width="1493" height="122" key="GridCell.Tab.0.left" timestamp="1648990210189">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="122" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1648990210189" />
+    <state width="1493" height="122" key="GridCell.Tab.0.right" timestamp="1648990210189">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="122" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1648990210189" />
+    <state width="1493" height="277" key="GridCell.Tab.1.bottom" timestamp="1648990210176">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="277" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1648990210176" />
+    <state width="1493" height="277" key="GridCell.Tab.1.center" timestamp="1648990210176">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="277" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1648990210176" />
+    <state width="1493" height="277" key="GridCell.Tab.1.left" timestamp="1648990210176">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="277" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1648990210176" />
+    <state width="1493" height="277" key="GridCell.Tab.1.right" timestamp="1648990210176">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="277" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1648990210176" />
+    <state x="498" y="13" key="SettingsEditor" timestamp="1648975875636">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="498" y="13" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1648975875636" />
+    <state x="178" y="136" key="new project wizard" timestamp="1649046310888">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="178" y="136" key="new project wizard/0.0.1536.864@0.0.1536.864" timestamp="1649046310888" />
+    <state x="511" y="55" key="refactoring.ChangeSignatureDialog" timestamp="1648972534865">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="511" y="55" key="refactoring.ChangeSignatureDialog/0.0.1536.864@0.0.1536.864" timestamp="1648972534865" />
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1648983651279">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1648983651279" />
+  </component>
+</project>
