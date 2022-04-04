@@ -1,6 +1,7 @@
 package com.zzj.rpc.entity;
 
 
+import com.zzj.rpc.enumeration.ResponseCode;
 import lombok.Data;
 
 import java.io.Serializable;

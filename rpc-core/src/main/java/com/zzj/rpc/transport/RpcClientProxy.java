@@ -3,11 +3,13 @@ package com.zzj.rpc.transport;
 
 import com.zzj.rpc.entity.RpcRequest;
 import com.zzj.rpc.entity.RpcResponse;
+import lombok.extern.slf4j.Slf4j;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
+@Slf4j
 public class RpcClientProxy implements InvocationHandler {
     private String host;
     private int port;
@@ -17,12 +19,10 @@ public class RpcClientProxy implements InvocationHandler {
     }
     @SuppressWarnings("unchecked")
     public <T> T getProxy(Class<T> clazz) {
-        System.out.println("调用getProxy");
         return (T) Proxy.newProxyInstance(clazz.getClassLoader(), new Class<?>[]{clazz}, this);
     }
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        System.out.println("invoke调用成功");
         RpcRequest rpcRequest = RpcRequest.builder()
                 .interfaceName(method.getDeclaringClass().getName())
                 .methodName(method.getName())
@@ -31,8 +31,8 @@ public class RpcClientProxy implements InvocationHandler {
                 .build();
         RpcClient rpcClient = new RpcClient();
         RpcResponse rpcResponse = (RpcResponse) rpcClient.sendRequest(rpcRequest, host, port);
-        Object data = rpcResponse.getData();
-
+        Object data =rpcResponse.getData().toString();
+        log.info("数据",rpcResponse.getData());
         return data;
     }
 }
