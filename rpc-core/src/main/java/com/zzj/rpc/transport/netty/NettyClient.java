@@ -5,6 +5,7 @@ import com.zzj.rpc.codec.CommonEncoder;
 import com.zzj.rpc.entity.RpcRequest;
 import com.zzj.rpc.entity.RpcResponse;
 import com.zzj.rpc.serializer.JsonSerializer;
+import com.zzj.rpc.serializer.KryoSerializer;
 import com.zzj.rpc.transport.RpcClient;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.*;
@@ -41,7 +42,7 @@ public class NettyClient implements RpcClient {
                         ChannelPipeline pipeline = socketChannel.pipeline();
                         // 添加解码，编码。业务处理器
                         pipeline.addLast(new CommonDecoder())
-                                .addLast(new CommonEncoder(new JsonSerializer()))
+                                .addLast(new CommonEncoder(new KryoSerializer()))
                                 .addLast(new NettyClientHandler());
                     }
                 });

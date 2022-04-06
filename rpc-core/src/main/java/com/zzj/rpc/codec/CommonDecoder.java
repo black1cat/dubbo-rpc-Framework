@@ -42,6 +42,7 @@ public class CommonDecoder extends ReplayingDecoder {
         }
         // 获取序列化用的序列化程序的编号
         int serializerCode = byteBuf.readInt();
+        // 根据序列化类型编号选择对应的序列化处理的程序
         CommonSerializer byCode = CommonSerializer.getByCode(serializerCode);
         if(null == byCode) {
             log.error("不识别的反序列化器：{}",serializerCode);

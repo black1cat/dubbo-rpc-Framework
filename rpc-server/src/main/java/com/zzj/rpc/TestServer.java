@@ -25,7 +25,7 @@ public class TestServer {
         rpcServer.start(9000);
          */
         /**
-         * v[2.0]服务端测试
+         * v[2.0-2.1]服务端测试
          */
         HelloServiceImpl helloService = new HelloServiceImpl();
         DefaultServiceRegistry defaultServiceRegistry = new DefaultServiceRegistry();

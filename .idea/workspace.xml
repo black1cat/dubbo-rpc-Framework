@@ -5,44 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77436e95-b91e-486b-a957-54a67f84d326" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/rpc-common/src/main/java/com/zzj/rpc/enumeration/PackageType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-common/src/main/java/com/zzj/rpc/enumeration/SerializerCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/codec/CommonDecoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/codec/CommonEncoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/serializer/CommonSerializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/serializer/JsonSerializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/transport/Socket/SocketClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/transport/Socket/SocketServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/transport/netty/NettyClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/transport/netty/NettyClientHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/transport/netty/NettyServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/transport/netty/NettyServerHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/serializer/KryoSerializer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo01.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-api/src/main/java/com/zzj/rpc/HelloObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-api/src/main/java/com/zzj/rpc/HelloObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-api/target/classes/com/zzj/rpc/HelloObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-api/target/classes/com/zzj/rpc/HelloObject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-client/src/main/java/com/zzj/rpc/TestClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-client/src/main/java/com/zzj/rpc/TestClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-client/target/classes/com/zzj/rpc/TestClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-client/target/classes/com/zzj/rpc/TestClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-common/src/main/java/com/zzj/rpc/entity/RpcRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-common/src/main/java/com/zzj/rpc/entity/RpcRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-common/src/main/java/com/zzj/rpc/entity/RpcResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-common/src/main/java/com/zzj/rpc/entity/RpcResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-common/target/classes/com/zzj/rpc/entity/RpcRequest$RpcRequestBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-common/target/classes/com/zzj/rpc/entity/RpcRequest$RpcRequestBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-common/target/classes/com/zzj/rpc/entity/RpcRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-common/target/classes/com/zzj/rpc/entity/RpcRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-common/target/classes/com/zzj/rpc/entity/RpcResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-common/target/classes/com/zzj/rpc/entity/RpcResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/register/DefaultServiceRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/register/DefaultServiceRegistry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/transport/RpcClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/transport/RpcClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/transport/RpcClientProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/transport/RpcClientProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/transport/RpcServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/transport/RpcServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/transport/WorkerThread.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/zzj/rpc/handler/RequesthandlerThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/zzj/rpc/handler/RequesthandlerThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/zzj/rpc/register/DefaultServiceRegistry.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/zzj/rpc/register/DefaultServiceRegistry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/zzj/rpc/transport/RpcClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/zzj/rpc/transport/RpcClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/zzj/rpc/transport/RpcClientProxy.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/zzj/rpc/transport/RpcClientProxy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/zzj/rpc/transport/RpcServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/zzj/rpc/transport/RpcServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/zzj/rpc/transport/WorkerThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-common/src/main/java/com/zzj/rpc/enumeration/SerializerCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-common/src/main/java/com/zzj/rpc/enumeration/SerializerCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-common/target/classes/com/zzj/rpc/enumeration/SerializerCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-common/target/classes/com/zzj/rpc/enumeration/SerializerCode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/codec/CommonDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/codec/CommonDecoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/serializer/CommonSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/serializer/CommonSerializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/transport/netty/NettyClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/transport/netty/NettyClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/transport/netty/NettyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/transport/netty/NettyServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/zzj/rpc/codec/CommonDecoder.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/zzj/rpc/codec/CommonDecoder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/zzj/rpc/serializer/CommonSerializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/zzj/rpc/serializer/CommonSerializer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/zzj/rpc/transport/netty/NettyClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/zzj/rpc/transport/netty/NettyClient.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rpc-server/src/main/java/com/zzj/rpc/TestServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-server/src/main/java/com/zzj/rpc/TestServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-server/target/classes/com/zzj/rpc/TestServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-server/target/classes/com/zzj/rpc/TestServer.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +129,8 @@
       <workItem from="1648971281243" duration="14582000" />
       <workItem from="1648997308105" duration="747000" />
       <workItem from="1649045904818" duration="16592000" />
-      <workItem from="1649146000571" duration="13953000" />
+      <workItem from="1649146000571" duration="14775000" />
+      <workItem from="1649227944822" duration="4933000" />
     </task>
     <servers />
   </component>
@@ -177,10 +155,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="361" y="94" key="#Project_Structure/0.0.1536.864@0.0.1536.864" timestamp="1649055876490" />
-    <state x="574" y="151" key="#com.intellij.ide.util.MemberChooser" timestamp="1649156106344">
+    <state x="574" y="151" key="#com.intellij.ide.util.MemberChooser" timestamp="1649230465742">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="574" y="151" key="#com.intellij.ide.util.MemberChooser/0.0.1536.864@0.0.1536.864" timestamp="1649156106344" />
+    <state x="574" y="151" key="#com.intellij.ide.util.MemberChooser/0.0.1536.864@0.0.1536.864" timestamp="1649230465742" />
     <state x="415" y="360" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1648978110537">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -193,22 +171,22 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="179" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.864@0.0.1536.864" timestamp="1649058693967" />
-    <state width="722" height="362" key="GridCell.Tab.0.bottom" timestamp="1649164344767">
+    <state width="1493" height="318" key="GridCell.Tab.0.bottom" timestamp="1649233016246">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="722" height="362" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1649164344767" />
-    <state width="722" height="362" key="GridCell.Tab.0.center" timestamp="1649164344767">
+    <state width="1493" height="318" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1649233016246" />
+    <state width="1493" height="318" key="GridCell.Tab.0.center" timestamp="1649233016246">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="722" height="362" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1649164344767" />
-    <state width="722" height="362" key="GridCell.Tab.0.left" timestamp="1649164344767">
+    <state width="1493" height="318" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1649233016246" />
+    <state width="1493" height="318" key="GridCell.Tab.0.left" timestamp="1649233016245">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="722" height="362" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1649164344767" />
-    <state width="722" height="362" key="GridCell.Tab.0.right" timestamp="1649164344767">
+    <state width="1493" height="318" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1649233016245" />
+    <state width="1493" height="318" key="GridCell.Tab.0.right" timestamp="1649233016246">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="722" height="362" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1649164344767" />
+    <state width="1493" height="318" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1649233016246" />
     <state width="1493" height="277" key="GridCell.Tab.1.bottom" timestamp="1648990210176">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

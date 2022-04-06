@@ -5,7 +5,7 @@ import com.zzj.rpc.transport.RpcClientProxy;
 import com.zzj.rpc.transport.netty.NettyClient;
 
 public class TestClient {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         /**
          * v[1.0]-v[1.1]
 
@@ -16,13 +16,15 @@ public class TestClient {
         System.out.println(hello);
          */
         /**
-         * v[2.0]
+         * v[2.0 - 2.1]
          */
         NettyClient nettyClient = new NettyClient("127.0.0.1", 9999);
         RpcClientProxy rpcClientProxy = new RpcClientProxy(nettyClient);
         HelloService helloService = rpcClientProxy.getProxy(HelloService.class);
         HelloObject helloObject = new HelloObject(12, "This is a message");
         String res = helloService.hello(helloObject);
+        Thread.sleep(10000);
+        String re = helloService.hello(helloObject);
         System.out.println(res);
     }
 
