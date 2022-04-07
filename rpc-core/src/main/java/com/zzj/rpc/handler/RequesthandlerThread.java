@@ -2,7 +2,7 @@ package com.zzj.rpc.handler;
 
 import com.zzj.rpc.entity.RpcRequest;
 import com.zzj.rpc.entity.RpcResponse;
-import com.zzj.rpc.register.ServiceRegistry;
+import com.zzj.rpc.provider.ServiceProvider;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
@@ -20,7 +20,7 @@ import java.net.Socket;
 public class RequesthandlerThread implements Runnable {
     private Socket socket;
     private RequestHandler requestHandler;
-    private ServiceRegistry serviceRegistry;
+    private ServiceProvider serviceProvider;
 
     @Override
     public void run() {
@@ -32,7 +32,7 @@ public class RequesthandlerThread implements Runnable {
             // 获取接口名字
             String interfaceName = rpcRequest.getInterfaceName();
             // 通过接口名称读取注册表里的服务
-            Object service = serviceRegistry.getService(interfaceName);
+            Object service = serviceProvider.getServiceProvider(interfaceName);
             // 通过requestHandler.handle(）获得方法执行后的返回值
             Object result = requestHandler.handle(rpcRequest, service);
             // 将返回值写入输出流中

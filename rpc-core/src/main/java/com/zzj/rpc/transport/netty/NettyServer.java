@@ -2,8 +2,14 @@ package com.zzj.rpc.transport.netty;
 
 import com.zzj.rpc.codec.CommonDecoder;
 import com.zzj.rpc.codec.CommonEncoder;
-import com.zzj.rpc.serializer.JsonSerializer;
-import com.zzj.rpc.serializer.KryoSerializer;
+import com.zzj.rpc.enumeration.RpcError;
+import com.zzj.rpc.exception.RpcException;
+import com.zzj.rpc.hook.ShutdownHook;
+import com.zzj.rpc.register.NacosServiceRegistry;
+import com.zzj.rpc.provider.ServiceProvider;
+import com.zzj.rpc.provider.ServiceProviderImpl;
+import com.zzj.rpc.register.ServiceRegister;
+import com.zzj.rpc.serializer.CommonSerializer;
 import com.zzj.rpc.transport.RpcServer;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
@@ -79,7 +85,8 @@ public class NettyServer implements RpcServer {
                         }
                     });
             // 绑定server 通过调用sync（）同步方法阻塞知道绑定成功
-            ChannelFuture future = serverBootstrap.bind(port).sync();
+            ChannelFuture future = serverBootstrap.bind(host,port).sync();
+            ShutdownHook.getShutdownHook().addClearAllHook();
             // 监听关闭事件 程序会一直等待 直到channel关闭
             future.channel().closeFuture().sync();
         } catch (InterruptedException e) {

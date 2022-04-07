@@ -3,8 +3,8 @@ package com.zzj.rpc.transport.netty;
 import com.zzj.rpc.entity.RpcRequest;
 import com.zzj.rpc.entity.RpcResponse;
 import com.zzj.rpc.handler.RequestHandler;
-import com.zzj.rpc.register.DefaultServiceRegistry;
-import com.zzj.rpc.register.ServiceRegistry;
+import com.zzj.rpc.provider.ServiceProviderImpl;
+import com.zzj.rpc.provider.ServiceProvider;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelFutureListener;
 import io.netty.channel.ChannelHandlerContext;
@@ -20,10 +20,10 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class NettyServerHandler extends SimpleChannelInboundHandler<RpcRequest> {
     private static RequestHandler requestHandler;
-    private static ServiceRegistry serviceRegistry;
+    private static ServiceProvider serviceProvider;
     static {
         requestHandler = new RequestHandler();
-        serviceRegistry = new DefaultServiceRegistry();
+        serviceProvider = new ServiceProviderImpl();
     }
 
     @Override
@@ -33,7 +33,7 @@ public class NettyServerHandler extends SimpleChannelInboundHandler<RpcRequest> 
             // 获取接口名称
             String interfaceName = msg.getInterfaceName();
             // 找到对应的实现类
-            Object service = serviceRegistry.getService(interfaceName);
+            Object service = serviceProvider.getServiceProvider(interfaceName);
             // 调用实现类对应的方式 获取返回结果
             Object result = requestHandler.handle(msg, service);
             // 写入数据并推送

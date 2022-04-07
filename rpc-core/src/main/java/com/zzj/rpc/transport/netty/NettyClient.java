@@ -2,8 +2,13 @@ package com.zzj.rpc.transport.netty;
 
 import com.zzj.rpc.entity.RpcRequest;
 import com.zzj.rpc.entity.RpcResponse;
-import com.zzj.rpc.serializer.JsonSerializer;
-import com.zzj.rpc.serializer.KryoSerializer;
+import com.zzj.rpc.enumeration.RpcError;
+import com.zzj.rpc.exception.RpcException;
+import com.zzj.rpc.loadbalance.LoadBalancer;
+import com.zzj.rpc.register.NacosServiceDiscovery;
+import com.zzj.rpc.register.NacosServiceRegistry;
+import com.zzj.rpc.register.ServiceDiscovery;
+import com.zzj.rpc.serializer.CommonSerializer;
 import com.zzj.rpc.transport.RpcClient;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.*;
@@ -23,10 +28,10 @@ import java.util.concurrent.atomic.AtomicReference;
 public class NettyClient implements RpcClient {
 
     private static final Bootstrap boostrap;
-    public NettyClient(String host,int port){
-        this.host = host;
-        this.port = port;
-    }
+    private final ServiceDiscovery serviceDiscovery;
+
+    private CommonSerializer serializer;
+
     static {
         // 创建发送线程组
         NioEventLoopGroup group = new NioEventLoopGroup();
@@ -35,16 +40,11 @@ public class NettyClient implements RpcClient {
                 .channel(NioSocketChannel.class)
                 // 设置tcp心跳机制
                 .option(ChannelOption.SO_KEEPALIVE,true)
-                .handler(new ChannelInitializer<SocketChannel>() {
-                    @Override
-                    protected void initChannel(SocketChannel socketChannel) throws Exception {
-                        ChannelPipeline pipeline = socketChannel.pipeline();
-                        // 添加解码，编码。业务处理器
-                        pipeline.addLast(new CommonDecoder())
-                                .addLast(new CommonEncoder(new KryoSerializer()))
-                                .addLast(new NettyClientHandler());
-                    }
-                });
+                .option(ChannelOption.CONNECT_TIMEOUT_MILLIS,5000)
+                .option(ChannelOption.TCP_NODELAY,true);
+    }
+    public NettyClient(LoadBalancer loadBalancer) {
+        this.serviceDiscovery = new NacosServiceDiscovery(loadBalancer);
     }
     @Override
     public Object sendRequest(RpcRequest rpcRequest) {
@@ -54,11 +54,10 @@ public class NettyClient implements RpcClient {
         }
         AtomicReference<Object> result = new AtomicReference<>(null);
         try{
-            // tcp与服务器建立连接
-            ChannelFuture future = boostrap.connect(host, port).sync();
-            log.info("客户端连接到服务器{}:{}",host,port);
-            // 获取处理器
-            Channel channel = future.channel();
+            InetSocketAddress inetSocketAddress = serviceDiscovery.lookupService(rpcRequest.getInterfaceName());
+
+            Channel channel = ChannelProvider.get(inetSocketAddress, serializer, boostrap);
+
             if(channel != null){
                 channel.writeAndFlush(rpcRequest).addListener(future1 -> {
                     if(future1.isSuccess()) {

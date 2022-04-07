@@ -1,6 +1,7 @@
 package com.zzj.rpc.transport;
 
 import com.zzj.rpc.entity.RpcRequest;
+import com.zzj.rpc.serializer.CommonSerializer;
 
 /**
  * @author zongzhaojin
@@ -8,4 +9,5 @@ import com.zzj.rpc.entity.RpcRequest;
  */
 public interface RpcClient {
     Object sendRequest(RpcRequest rpcRequest);
+    void setSerializer(CommonSerializer serializer);
 }

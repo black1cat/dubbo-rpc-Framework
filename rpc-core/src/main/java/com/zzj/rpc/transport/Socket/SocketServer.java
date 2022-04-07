@@ -2,7 +2,8 @@ package com.zzj.rpc.transport.Socket;
 
 import com.zzj.rpc.handler.RequestHandler;
 import com.zzj.rpc.handler.RequesthandlerThread;
-import com.zzj.rpc.register.ServiceRegistry;
+import com.zzj.rpc.provider.ServiceProvider;
+import com.zzj.rpc.serializer.CommonSerializer;
 import com.zzj.rpc.transport.RpcServer;
 import lombok.extern.slf4j.Slf4j;
 
@@ -20,16 +21,15 @@ public class SocketServer implements RpcServer {
     private static final int BLOCKING_QUEUE_CAPACITY = 100;
     public final ExecutorService threadPool;
     private RequestHandler requestHandler = new RequestHandler();
-    private final ServiceRegistry serviceRegistry;
+    private final ServiceProvider serviceRegistry;
 
     // 初始化注册表类、初始化创建一个线程池
-    public SocketServer(ServiceRegistry serviceRegistry) {
+    public SocketServer(ServiceProvider serviceRegistry) {
         this.serviceRegistry = serviceRegistry;
         ArrayBlockingQueue<Runnable> workingQueue = new ArrayBlockingQueue<>(BLOCKING_QUEUE_CAPACITY);
         ThreadFactory threadFactory = Executors.defaultThreadFactory();
         threadPool = new ThreadPoolExecutor(CORE_POOL_SIZE,MAXIMUM_POOL_SIZE,KEEP_ALIVE_TIME,TimeUnit.SECONDS,workingQueue,threadFactory);
     }
-    @Override
    public void start(int port) {
         // 启动SocketServer
         try(ServerSocket serverSocket = new ServerSocket(port)){
@@ -47,4 +47,19 @@ public class SocketServer implements RpcServer {
             log.error("服务器启动时有错误发生:", e);
         }
    }
+
+    @Override
+    public void start() {
+
+    }
+
+    @Override
+    public <T> void publishService(Object service, Class<T> serviceClass) {
+
+    }
+
+    @Override
+    public void setSerializer(CommonSerializer serializer) {
+
+    }
 }

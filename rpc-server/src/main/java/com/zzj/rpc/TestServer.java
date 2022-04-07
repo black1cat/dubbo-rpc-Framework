@@ -1,8 +1,11 @@
 package com.zzj.rpc;
 
 
-import com.zzj.rpc.register.DefaultServiceRegistry;
-import com.zzj.rpc.transport.Socket.SocketServer;
+import com.zzj.rpc.provider.ServiceProviderImpl;
+import com.zzj.rpc.serializer.KryoSerializer;
+import com.zzj.rpc.transport.RpcClient;
+import com.zzj.rpc.transport.RpcClientProxy;
+import com.zzj.rpc.transport.netty.NettyClient;
 import com.zzj.rpc.transport.netty.NettyServer;
 
 public class TestServer {
@@ -27,10 +30,18 @@ public class TestServer {
         /**
          * v[2.0-2.1]服务端测试
          */
-        HelloServiceImpl helloService = new HelloServiceImpl();
-        DefaultServiceRegistry defaultServiceRegistry = new DefaultServiceRegistry();
-        defaultServiceRegistry.register(helloService);
-        NettyServer nettyServer = new NettyServer();
-        nettyServer.start(9999);
+//        HelloServiceImpl helloService = new HelloServiceImpl();
+//        ServiceProviderImpl defaultServiceRegistry = new ServiceProviderImpl();
+//        defaultServiceRegistry.register(helloService);
+//        NettyServer nettyServer = new NettyServer(host, port, serviceProvider, serviceRegister);
+//        nettyServer.start(9999);
+        /**
+         *
+         */
+
+        HelloService helloService = new HelloServiceImpl();
+        NettyServer server = new NettyServer("127.0.0.1", 9999);
+        server.setSerializer(new KryoSerializer());
+        server.publishService(helloService, HelloService.class);
     }
 }
