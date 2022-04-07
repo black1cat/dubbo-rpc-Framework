@@ -92,7 +92,6 @@ public class NettyServer extends AbstractRpcServer {
                     });
             // 绑定server 通过调用sync（）同步方法阻塞知道绑定成功
             ChannelFuture future = serverBootstrap.bind(host,port).sync();
-
             // 监听关闭事件 程序会一直等待 直到channel关闭
             future.channel().closeFuture().sync();
         } catch (InterruptedException e) {
