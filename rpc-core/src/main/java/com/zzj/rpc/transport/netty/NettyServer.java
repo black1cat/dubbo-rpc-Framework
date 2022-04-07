@@ -17,14 +17,29 @@ import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
 import lombok.extern.slf4j.Slf4j;
 
+import java.net.InetSocketAddress;
+
 /**
  * @author zongzhaojin
  * @date 2022/4/4 16:01
  */
 @Slf4j
 public class NettyServer implements RpcServer {
+    private String host;
+    private int port;
+    private ServiceProvider serviceProvider;
+    private ServiceRegister serviceRegister;
+
+    private CommonSerializer commonSerializer;
+    public NettyServer(String host, int port) {
+        this.host = host;
+        this.port = port;
+        this.serviceProvider = new ServiceProviderImpl();
+        this.serviceRegister = new NacosServiceRegistry();
+    }
+
     @Override
-    public void start(int port) {
+    public void start() {
 
         // 首先构造两个线程组
         // bossGroup用来接收客户端传过来的请求
@@ -55,7 +70,7 @@ public class NettyServer implements RpcServer {
                             ChannelPipeline pipeline = socketChannel.pipeline();
                             // 在流水线pipline后面 进行装配  增加数据读写、处理业务的handler
                             // 编码处理器
-                            pipeline.addLast(new CommonEncoder(new KryoSerializer()));
+                            pipeline.addLast(new CommonEncoder(commonSerializer));
                             // 解码处理器
                             pipeline.addLast(new CommonDecoder());
                             // 业务处理器
@@ -74,5 +89,21 @@ public class NettyServer implements RpcServer {
             bossGroup.shutdownGracefully();
             workerGroup.shutdownGracefully();
         }
+    }
+
+    @Override
+    public <T> void publishService(Object service, Class<T> serviceClass) {
+        if(commonSerializer == null){
+            log.error("未设置序列化器");
+            throw new RpcException(RpcError.SERIALIZER_NOT_FOUND);
+        }
+        serviceProvider.addServiceProvider(service);
+        serviceRegister.register(serviceClass.getCanonicalName(),new InetSocketAddress(host,port));
+        start();
+    }
+
+    @Override
+    public void setSerializer(CommonSerializer serializer) {
+        this.commonSerializer = serializer;
     }
 }

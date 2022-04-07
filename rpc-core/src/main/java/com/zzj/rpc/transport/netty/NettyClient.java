@@ -1,7 +1,5 @@
 package com.zzj.rpc.transport.netty;
 
-import com.zzj.rpc.codec.CommonDecoder;
-import com.zzj.rpc.codec.CommonEncoder;
 import com.zzj.rpc.entity.RpcRequest;
 import com.zzj.rpc.entity.RpcResponse;
 import com.zzj.rpc.serializer.JsonSerializer;
@@ -10,10 +8,12 @@ import com.zzj.rpc.transport.RpcClient;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
-import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.util.AttributeKey;
 import lombok.extern.slf4j.Slf4j;
+
+import java.net.InetSocketAddress;
+import java.util.concurrent.atomic.AtomicReference;
 
 /**
  * @author zongzhaojin
@@ -21,8 +21,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class NettyClient implements RpcClient {
-    private String host;
-    private int port;
+
     private static final Bootstrap boostrap;
     public NettyClient(String host,int port){
         this.host = host;
@@ -49,6 +48,11 @@ public class NettyClient implements RpcClient {
     }
     @Override
     public Object sendRequest(RpcRequest rpcRequest) {
+        if(serializer == null){
+            log.error("未设置序列化器");
+            throw new RpcException(RpcError.SERIALIZER_NOT_FOUND);
+        }
+        AtomicReference<Object> result = new AtomicReference<>(null);
         try{
             // tcp与服务器建立连接
             ChannelFuture future = boostrap.connect(host, port).sync();
@@ -76,5 +80,10 @@ public class NettyClient implements RpcClient {
             log.error("发送消息时有错误发生: {}",e);
         }
         return null;
+    }
+
+    @Override
+    public void setSerializer(CommonSerializer serializer) {
+        this.serializer = serializer;
     }
 }

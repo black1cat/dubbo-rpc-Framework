@@ -8,18 +8,51 @@
       <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/serializer/KryoSerializer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo01.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-common/src/main/java/com/zzj/rpc/enumeration/SerializerCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-common/src/main/java/com/zzj/rpc/enumeration/SerializerCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-common/target/classes/com/zzj/rpc/enumeration/SerializerCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-common/target/classes/com/zzj/rpc/enumeration/SerializerCode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/codec/CommonDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/codec/CommonDecoder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/serializer/CommonSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/serializer/CommonSerializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-client/src/main/java/com/zzj/rpc/TestClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-client/src/main/java/com/zzj/rpc/TestClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/transport/netty/NettyClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/transport/netty/NettyClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/transport/netty/NettyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/transport/netty/NettyServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/zzj/rpc/codec/CommonDecoder.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/zzj/rpc/codec/CommonDecoder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/zzj/rpc/serializer/CommonSerializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/zzj/rpc/serializer/CommonSerializer.class" afterDir="false" />
+    </list>
+    <list id="09e6b95b-4af0-42e3-b2f0-e84a21f62723" name="v[3.0] 整合Nocas为注册中心" comment="">
+      <change afterPath="$PROJECT_DIR$/rpc-common/src/main/java/com/zzj/rpc/util/NacosUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-common/target/classes/com/zzj/rpc/util/NacosUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/provider/ServiceProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/register/NacosServiceRegistry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/register/ServiceRegister.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/transport/netty/ChannelProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/zzj/rpc/provider/ServiceProvider.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/zzj/rpc/provider/ServiceProviderImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/zzj/rpc/register/NacosServiceRegistry.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/zzj/rpc/register/ServiceRegister.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/zzj/rpc/transport/netty/ChannelProvider$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/zzj/rpc/transport/netty/ChannelProvider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-client/src/main/java/com/zzj/rpc/TestClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-client/src/main/java/com/zzj/rpc/TestClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-client/target/classes/com/zzj/rpc/TestClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-client/target/classes/com/zzj/rpc/TestClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/handler/RequesthandlerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/handler/RequesthandlerThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/register/DefaultServiceRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/provider/ServiceProviderImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/register/ServiceRegistry.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/transport/RpcClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/transport/RpcClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/transport/RpcServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/transport/RpcServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/transport/Socket/SocketClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/transport/Socket/SocketClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/transport/Socket/SocketServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/transport/Socket/SocketServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/transport/netty/NettyClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/transport/netty/NettyClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/transport/netty/NettyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/transport/netty/NettyServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/transport/netty/NettyServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/transport/netty/NettyServerHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/zzj/rpc/handler/RequesthandlerThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/zzj/rpc/handler/RequesthandlerThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/zzj/rpc/register/DefaultServiceRegistry.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/zzj/rpc/register/ServiceRegistry.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/zzj/rpc/transport/RpcClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/zzj/rpc/transport/RpcClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/zzj/rpc/transport/RpcServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/zzj/rpc/transport/RpcServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/zzj/rpc/transport/Socket/SocketClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/zzj/rpc/transport/Socket/SocketClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/zzj/rpc/transport/Socket/SocketServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/zzj/rpc/transport/Socket/SocketServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/zzj/rpc/transport/netty/NettyClient$1.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/zzj/rpc/transport/netty/NettyClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/zzj/rpc/transport/netty/NettyClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/zzj/rpc/transport/netty/NettyServer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/zzj/rpc/transport/netty/NettyServer$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/zzj/rpc/transport/netty/NettyServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/zzj/rpc/transport/netty/NettyServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-core/target/classes/com/zzj/rpc/transport/netty/NettyServerHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-core/target/classes/com/zzj/rpc/transport/netty/NettyServerHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rpc-server/src/main/java/com/zzj/rpc/TestServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-server/src/main/java/com/zzj/rpc/TestServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-server/target/classes/com/zzj/rpc/TestServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-server/target/classes/com/zzj/rpc/TestServer.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,14 +65,77 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/transport/netty/NettyServer.java">
+      <ranges>
+        <range start1="4" end1="6" start2="4" end2="12" changelist="09e6b95b-4af0-42e3-b2f0-e84a21f62723" />
+        <range start1="19" end1="19" start2="25" end2="27" changelist="77436e95-b91e-486b-a957-54a67f84d326" />
+        <range start1="25" end1="25" start2="33" end2="46" changelist="77436e95-b91e-486b-a957-54a67f84d326" />
+        <range start1="26" end1="27" start2="47" end2="48" changelist="77436e95-b91e-486b-a957-54a67f84d326" />
+        <range start1="57" end1="58" start2="78" end2="79" changelist="77436e95-b91e-486b-a957-54a67f84d326" />
+        <range start1="66" end1="67" start2="87" end2="89" changelist="09e6b95b-4af0-42e3-b2f0-e84a21f62723" />
+        <range start1="77" end1="77" start2="99" end2="115" changelist="77436e95-b91e-486b-a957-54a67f84d326" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/rpc-client/src/main/java/com/zzj/rpc/TestClient.java">
+      <ranges>
+        <range start1="3" end1="3" start2="3" end2="6" changelist="09e6b95b-4af0-42e3-b2f0-e84a21f62723" />
+        <range start1="20" end1="22" start2="23" end2="34" changelist="09e6b95b-4af0-42e3-b2f0-e84a21f62723" />
+        <range start1="23" end1="27" start2="35" end2="37" changelist="77436e95-b91e-486b-a957-54a67f84d326" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/.idea/workspace.xml">
+      <ranges>
+        <range start1="7" end1="9" start2="7" end2="13" changelist="09e6b95b-4af0-42e3-b2f0-e84a21f62723" />
+        <range start1="10" end1="16" start2="14" end2="20" changelist="09e6b95b-4af0-42e3-b2f0-e84a21f62723" />
+        <range start1="18" end1="20" start2="22" end2="24" changelist="09e6b95b-4af0-42e3-b2f0-e84a21f62723" />
+        <range start1="21" end1="22" start2="25" end2="26" changelist="09e6b95b-4af0-42e3-b2f0-e84a21f62723" />
+        <range start1="34" end1="35" start2="38" end2="38" changelist="09e6b95b-4af0-42e3-b2f0-e84a21f62723" />
+        <range start1="36" end1="36" start2="39" end2="40" changelist="09e6b95b-4af0-42e3-b2f0-e84a21f62723" />
+        <range start1="62" end1="62" start2="66" end2="67" changelist="09e6b95b-4af0-42e3-b2f0-e84a21f62723" />
+        <range start1="132" end1="133" start2="137" end2="138" changelist="09e6b95b-4af0-42e3-b2f0-e84a21f62723" />
+        <range start1="157" end1="158" start2="162" end2="163" changelist="09e6b95b-4af0-42e3-b2f0-e84a21f62723" />
+        <range start1="160" end1="161" start2="165" end2="166" changelist="09e6b95b-4af0-42e3-b2f0-e84a21f62723" />
+        <range start1="169" end1="170" start2="174" end2="175" changelist="77436e95-b91e-486b-a957-54a67f84d326" />
+        <range start1="172" end1="174" start2="177" end2="179" changelist="09e6b95b-4af0-42e3-b2f0-e84a21f62723" />
+        <range start1="176" end1="178" start2="181" end2="183" changelist="09e6b95b-4af0-42e3-b2f0-e84a21f62723" />
+        <range start1="180" end1="182" start2="185" end2="187" changelist="09e6b95b-4af0-42e3-b2f0-e84a21f62723" />
+        <range start1="184" end1="186" start2="189" end2="191" changelist="09e6b95b-4af0-42e3-b2f0-e84a21f62723" />
+        <range start1="188" end1="190" start2="193" end2="195" changelist="09e6b95b-4af0-42e3-b2f0-e84a21f62723" />
+        <range start1="192" end1="194" start2="197" end2="199" changelist="09e6b95b-4af0-42e3-b2f0-e84a21f62723" />
+        <range start1="196" end1="198" start2="201" end2="203" changelist="09e6b95b-4af0-42e3-b2f0-e84a21f62723" />
+        <range start1="200" end1="202" start2="205" end2="207" changelist="09e6b95b-4af0-42e3-b2f0-e84a21f62723" />
+        <range start1="204" end1="205" start2="209" end2="210" changelist="09e6b95b-4af0-42e3-b2f0-e84a21f62723" />
+        <range start1="209" end1="209" start2="214" end2="218" changelist="09e6b95b-4af0-42e3-b2f0-e84a21f62723" />
+        <range start1="213" end1="214" start2="222" end2="223" changelist="09e6b95b-4af0-42e3-b2f0-e84a21f62723" />
+        <range start1="216" end1="218" start2="225" end2="227" changelist="09e6b95b-4af0-42e3-b2f0-e84a21f62723" />
+        <range start1="220" end1="222" start2="229" end2="231" changelist="09e6b95b-4af0-42e3-b2f0-e84a21f62723" />
+        <range start1="224" end1="225" start2="233" end2="234" changelist="09e6b95b-4af0-42e3-b2f0-e84a21f62723" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/rpc-core/src/main/java/com/zzj/rpc/transport/netty/NettyClient.java">
+      <ranges>
+        <range start1="2" end1="4" start2="2" end2="2" changelist="77436e95-b91e-486b-a957-54a67f84d326" />
+        <range start1="6" end1="8" start2="4" end2="11" changelist="09e6b95b-4af0-42e3-b2f0-e84a21f62723" />
+        <range start1="12" end1="13" start2="15" end2="15" changelist="77436e95-b91e-486b-a957-54a67f84d326" />
+        <range start1="17" end1="17" start2="19" end2="22" changelist="77436e95-b91e-486b-a957-54a67f84d326" />
+        <range start1="23" end1="25" start2="28" end2="29" changelist="77436e95-b91e-486b-a957-54a67f84d326" />
+        <range start1="26" end1="30" start2="30" end2="34" changelist="09e6b95b-4af0-42e3-b2f0-e84a21f62723" />
+        <range start1="38" end1="48" start2="42" end2="47" changelist="09e6b95b-4af0-42e3-b2f0-e84a21f62723" />
+        <range start1="51" end1="51" start2="50" end2="55" changelist="77436e95-b91e-486b-a957-54a67f84d326" />
+        <range start1="52" end1="57" start2="56" end2="60" changelist="09e6b95b-4af0-42e3-b2f0-e84a21f62723" />
+        <range start1="79" end1="79" start2="82" end2="87" changelist="77436e95-b91e-486b-a957-54a67f84d326" />
+      </ranges>
+    </file>
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -60,6 +156,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/rpc-core/src/main/resources" />
@@ -122,6 +219,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="77436e95-b91e-486b-a957-54a67f84d326" name="Default Changelist" comment="" />
+      <changelist id="09e6b95b-4af0-42e3-b2f0-e84a21f62723" name="v[3.0] 整合Nocas为注册中心" comment="" />
       <created>1648971272639</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -130,7 +228,7 @@
       <workItem from="1648997308105" duration="747000" />
       <workItem from="1649045904818" duration="16592000" />
       <workItem from="1649146000571" duration="14775000" />
-      <workItem from="1649227944822" duration="4933000" />
+      <workItem from="1649227944822" duration="20595000" />
     </task>
     <servers />
   </component>
@@ -155,10 +253,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="361" y="94" key="#Project_Structure/0.0.1536.864@0.0.1536.864" timestamp="1649055876490" />
-    <state x="574" y="151" key="#com.intellij.ide.util.MemberChooser" timestamp="1649230465742">
+    <state x="574" y="151" key="#com.intellij.ide.util.MemberChooser" timestamp="1649316103366">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="574" y="151" key="#com.intellij.ide.util.MemberChooser/0.0.1536.864@0.0.1536.864" timestamp="1649230465742" />
+    <state x="574" y="151" key="#com.intellij.ide.util.MemberChooser/0.0.1536.864@0.0.1536.864" timestamp="1649316103366" />
     <state x="415" y="360" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1648978110537">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -167,46 +265,58 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="553" y="299" width="429" height="271" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.864@0.0.1536.864" timestamp="1648978160514" />
-    <state x="179" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1649058693967">
+    <state x="179" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1649235917256">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="179" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.864@0.0.1536.864" timestamp="1649058693967" />
-    <state width="1493" height="318" key="GridCell.Tab.0.bottom" timestamp="1649233016246">
+    <state x="179" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.864@0.0.1536.864" timestamp="1649235917256" />
+    <state x="726" y="32" key="CommitChangelistDialog2" timestamp="1649316975323">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="318" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1649233016246" />
-    <state width="1493" height="318" key="GridCell.Tab.0.center" timestamp="1649233016246">
+    <state x="726" y="32" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1649316975323" />
+    <state width="722" height="562" key="GridCell.Tab.0.bottom" timestamp="1649316983587">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="318" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1649233016246" />
-    <state width="1493" height="318" key="GridCell.Tab.0.left" timestamp="1649233016245">
+    <state width="722" height="562" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1649316983587" />
+    <state width="722" height="562" key="GridCell.Tab.0.center" timestamp="1649316983587">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="318" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1649233016245" />
-    <state width="1493" height="318" key="GridCell.Tab.0.right" timestamp="1649233016246">
+    <state width="722" height="562" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1649316983587" />
+    <state width="722" height="562" key="GridCell.Tab.0.left" timestamp="1649316983587">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="318" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1649233016246" />
-    <state width="1493" height="277" key="GridCell.Tab.1.bottom" timestamp="1648990210176">
+    <state width="722" height="562" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1649316983587" />
+    <state width="722" height="562" key="GridCell.Tab.0.right" timestamp="1649316983587">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="277" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1648990210176" />
-    <state width="1493" height="277" key="GridCell.Tab.1.center" timestamp="1648990210176">
+    <state width="722" height="562" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1649316983587" />
+    <state width="722" height="274" key="GridCell.Tab.1.bottom" timestamp="1649316437178">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="277" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1648990210176" />
-    <state width="1493" height="277" key="GridCell.Tab.1.left" timestamp="1648990210176">
+    <state width="722" height="274" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1649316437178" />
+    <state width="722" height="274" key="GridCell.Tab.1.center" timestamp="1649316437177">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="277" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1648990210176" />
-    <state width="1493" height="277" key="GridCell.Tab.1.right" timestamp="1648990210176">
+    <state width="722" height="274" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1649316437177" />
+    <state width="722" height="274" key="GridCell.Tab.1.left" timestamp="1649316437177">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="277" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1648990210176" />
+    <state width="722" height="274" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1649316437177" />
+    <state width="722" height="274" key="GridCell.Tab.1.right" timestamp="1649316437177">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="722" height="274" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1649316437177" />
     <state x="544" y="59" width="992" height="707" key="SettingsEditor" timestamp="1649048636642">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="544" y="59" width="992" height="707" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1649048636642" />
+    <state x="997" y="353" key="VCS.ChangelistChooser" timestamp="1649316840375">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="997" y="353" key="VCS.ChangelistChooser/0.0.1536.864@0.0.1536.864" timestamp="1649316840375" />
+    <state x="647" y="174" width="889" height="565" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1649252117725">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="647" y="174" width="889" height="565" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.864@0.0.1536.864" timestamp="1649252117725" />
     <state x="178" y="136" key="new project wizard" timestamp="1649046310888">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
