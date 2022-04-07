@@ -2,8 +2,15 @@ package com.zzj.rpc.transport.netty;
 
 import com.zzj.rpc.codec.CommonDecoder;
 import com.zzj.rpc.codec.CommonEncoder;
-import com.zzj.rpc.serializer.JsonSerializer;
-import com.zzj.rpc.serializer.KryoSerializer;
+import com.zzj.rpc.enumeration.RpcError;
+import com.zzj.rpc.exception.RpcException;
+import com.zzj.rpc.hook.ShutdownHook;
+import com.zzj.rpc.register.NacosServiceRegistry;
+import com.zzj.rpc.provider.ServiceProvider;
+import com.zzj.rpc.provider.ServiceProviderImpl;
+import com.zzj.rpc.register.ServiceRegister;
+import com.zzj.rpc.serializer.CommonSerializer;
+import com.zzj.rpc.transport.AbstractRpcServer;
 import com.zzj.rpc.transport.RpcServer;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
@@ -24,23 +31,28 @@ import java.net.InetSocketAddress;
  * @date 2022/4/4 16:01
  */
 @Slf4j
-public class NettyServer implements RpcServer {
-    private String host;
-    private int port;
-    private ServiceProvider serviceProvider;
-    private ServiceRegister serviceRegister;
+public class NettyServer extends AbstractRpcServer {
+
 
     private CommonSerializer commonSerializer;
     public NettyServer(String host, int port) {
+        this(host, port, DEFAULT_SERIALIZER);
+    }
+
+    public NettyServer(String host, int port, Integer serializer) {
         this.host = host;
         this.port = port;
-        this.serviceProvider = new ServiceProviderImpl();
-        this.serviceRegister = new NacosServiceRegistry();
+        serviceRegister = new NacosServiceRegistry();
+        serviceProvider = new ServiceProviderImpl();
+        this.commonSerializer = CommonSerializer.getByCode(serializer);
+        scanServices();
     }
+
+
 
     @Override
     public void start() {
-
+        ShutdownHook.getShutdownHook().addClearAllHook();
         // 首先构造两个线程组
         // bossGroup用来接收客户端传过来的请求
         NioEventLoopGroup bossGroup = new NioEventLoopGroup();
@@ -79,7 +91,8 @@ public class NettyServer implements RpcServer {
                         }
                     });
             // 绑定server 通过调用sync（）同步方法阻塞知道绑定成功
-            ChannelFuture future = serverBootstrap.bind(port).sync();
+            ChannelFuture future = serverBootstrap.bind(host,port).sync();
+
             // 监听关闭事件 程序会一直等待 直到channel关闭
             future.channel().closeFuture().sync();
         } catch (InterruptedException e) {
@@ -91,19 +104,4 @@ public class NettyServer implements RpcServer {
         }
     }
 
-    @Override
-    public <T> void publishService(Object service, Class<T> serviceClass) {
-        if(commonSerializer == null){
-            log.error("未设置序列化器");
-            throw new RpcException(RpcError.SERIALIZER_NOT_FOUND);
-        }
-        serviceProvider.addServiceProvider(service);
-        serviceRegister.register(serviceClass.getCanonicalName(),new InetSocketAddress(host,port));
-        start();
-    }
-
-    @Override
-    public void setSerializer(CommonSerializer serializer) {
-        this.commonSerializer = serializer;
-    }
 }

@@ -1,7 +1,8 @@
-package com.zzj.rpc.register;
+package com.zzj.rpc.provider;
 
 import com.zzj.rpc.enumeration.RpcError;
 import com.zzj.rpc.exception.RpcException;
+import com.zzj.rpc.provider.ServiceProvider;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.Map;
@@ -9,14 +10,12 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 @Slf4j
-public class DefaultServiceRegistry implements ServiceRegistry {
+public class ServiceProviderImpl implements ServiceProvider {
    private final static Map<String,Object> serviceMap =  new ConcurrentHashMap<>();
    private final static Set<String> registeredService = ConcurrentHashMap.newKeySet();
 
     @Override
-    public synchronized  <T> void register(T service) {
-        // 获取实现类名称
-        String serviceName = service.getClass().getCanonicalName();
+    public synchronized  <T> void addServiceProvider(T service,String serviceName) {
         // 判断注册列表中是否存在服务
         if(registeredService.contains(serviceName)) {
             // 存在服务则直接返回
@@ -38,7 +37,7 @@ public class DefaultServiceRegistry implements ServiceRegistry {
     }
 
     @Override
-    public Object getService(String serviceName) {
+    public Object getServiceProvider(String serviceName) {
         // 获取服务
         Object service = serviceMap.get(serviceName);
         // 若获取不到则抛异常

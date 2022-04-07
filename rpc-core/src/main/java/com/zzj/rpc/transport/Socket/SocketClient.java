@@ -1,6 +1,7 @@
 package com.zzj.rpc.transport.Socket;
 
 import com.zzj.rpc.entity.RpcRequest;
+import com.zzj.rpc.serializer.CommonSerializer;
 import com.zzj.rpc.transport.RpcClient;
 import lombok.extern.slf4j.Slf4j;
 
@@ -29,5 +30,10 @@ public class SocketClient implements RpcClient {
     @Override
     public Object sendRequest(RpcRequest rpcRequest) {
         return null;
+    }
+
+    @Override
+    public void setSerializer(CommonSerializer serializer) {
+
     }
 }

@@ -1,9 +1,11 @@
 package com.zzj.rpc;
 
+import com.zzj.rpc.annotation.Service;
 import lombok.extern.slf4j.Slf4j;
 
 
 @Slf4j
+@Service
 public class HelloServiceImpl implements HelloService {
 
     @Override
